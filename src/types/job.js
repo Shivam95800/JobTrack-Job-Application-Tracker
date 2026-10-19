@@ -1,0 +1,112 @@
+export const JOB_STATUSES = {
+  WISHLIST: 'Wishlist',
+  APPLIED: 'Applied',
+  ONLINE_TEST: 'Online Test',
+  INTERVIEW: 'Interview',
+  OFFER: 'Offer',
+  REJECTED: 'Rejected',
+  WITHDRAWN: 'Withdrawn',
+};
+
+export const STATUS_LIST = [
+  JOB_STATUSES.WISHLIST,
+  JOB_STATUSES.APPLIED,
+  JOB_STATUSES.ONLINE_TEST,
+  JOB_STATUSES.INTERVIEW,
+  JOB_STATUSES.OFFER,
+  JOB_STATUSES.REJECTED,
+  JOB_STATUSES.WITHDRAWN,
+];
+
+export const STATUS_CONFIG = {
+  [JOB_STATUSES.WISHLIST]: {
+    label: 'Wishlist',
+    color: 'slate',
+    bgLight: 'bg-slate-100 text-slate-700 border-slate-200',
+    bgDark: 'dark:bg-slate-800/80 dark:text-slate-300 dark:border-slate-700',
+    pill: 'bg-slate-500',
+    hex: '#64748b',
+    columnBorder: 'border-t-slate-400',
+    accentText: 'text-slate-500 dark:text-slate-400',
+  },
+  [JOB_STATUSES.APPLIED]: {
+    label: 'Applied',
+    color: 'blue',
+    bgLight: 'bg-blue-50 text-blue-700 border-blue-200',
+    bgDark: 'dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800',
+    pill: 'bg-blue-500',
+    hex: '#3b82f6',
+    columnBorder: 'border-t-blue-500',
+    accentText: 'text-blue-500 dark:text-blue-400',
+  },
+  [JOB_STATUSES.ONLINE_TEST]: {
+    label: 'Online Test',
+    color: 'purple',
+    bgLight: 'bg-purple-50 text-purple-700 border-purple-200',
+    bgDark: 'dark:bg-purple-950/60 dark:text-purple-300 dark:border-purple-800',
+    pill: 'bg-purple-500',
+    hex: '#a855f7',
+    columnBorder: 'border-t-purple-500',
+    accentText: 'text-purple-500 dark:text-purple-400',
+  },
+  [JOB_STATUSES.INTERVIEW]: {
+    label: 'Interview',
+    color: 'amber',
+    bgLight: 'bg-amber-50 text-amber-800 border-amber-200',
+    bgDark: 'dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800',
+    pill: 'bg-amber-500',
+    hex: '#f59e0b',
+    columnBorder: 'border-t-amber-500',
+    accentText: 'text-amber-500 dark:text-amber-400',
+  },
+  [JOB_STATUSES.OFFER]: {
+    label: 'Offer',
+    color: 'emerald',
+    bgLight: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+    bgDark: 'dark:bg-emerald-950/60 dark:text-emerald-300 dark:border-emerald-800',
+    pill: 'bg-emerald-500',
+    hex: '#10b981',
+    columnBorder: 'border-t-emerald-500',
+    accentText: 'text-emerald-500 dark:text-emerald-400',
+  },
+  [JOB_STATUSES.REJECTED]: {
+    label: 'Rejected',
+    color: 'rose',
+    bgLight: 'bg-rose-50 text-rose-700 border-rose-200',
+    bgDark: 'dark:bg-rose-950/60 dark:text-rose-300 dark:border-rose-800',
+    pill: 'bg-rose-500',
+    hex: '#f43f5e',
+    columnBorder: 'border-t-rose-500',
+    accentText: 'text-rose-500 dark:text-rose-400',
+  },
+  [JOB_STATUSES.WITHDRAWN]: {
+    label: 'Withdrawn',
+    color: 'zinc',
+    bgLight: 'bg-zinc-100 text-zinc-700 border-zinc-200',
+    bgDark: 'dark:bg-zinc-800/80 dark:text-zinc-300 dark:border-zinc-700',
+    pill: 'bg-zinc-500',
+    hex: '#71717a',
+    columnBorder: 'border-t-zinc-400',
+    accentText: 'text-zinc-500 dark:text-zinc-400',
+  },
+};
+
+export const JOB_TYPES = [
+  'Full-time',
+  'Part-time',
+  'Internship',
+  'Remote',
+  'Contract',
+];
+
+export const JOB_SOURCES = [
+  'LinkedIn',
+  'Naukri',
+  'Indeed',
+  'Company Website',
+  'Referral',
+  'Wellfound / AngelList',
+  'Glassdoor',
+  'Recruiter InMail',
+  'Other',
+];
