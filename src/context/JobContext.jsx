@@ -4,6 +4,7 @@ import { useAuth } from './AuthContext';
 import { useToast } from './ToastContext';
 import { jobService } from '../services/jobService';
 import { exportImportService } from '../services/exportImportService';
+import { pdfReportService } from '../services/pdfReportService';
 import { JOB_STATUSES, STATUS_LIST, STATUS_CONFIG } from '../types/job';
 
 const JobContext = createContext();
@@ -206,6 +207,15 @@ export const JobProvider = ({ children }) => {
     },
     [currentUser?.id, addToast]
   );
+
+  const exportPDF = useCallback(() => {
+    if (jobs.length === 0) {
+      addToast('No applications to generate a report', 'error');
+      return;
+    }
+    pdfReportService.generatePDFReport(jobs, stats, currentUser);
+    addToast('Opening printable PDF report...', 'info');
+  }, [jobs, stats, currentUser, addToast]);
 
   // Confetti effect helper
   const triggerOfferConfetti = () => {
@@ -436,6 +446,7 @@ export const JobProvider = ({ children }) => {
         importCSV,
         exportJSON,
         importJSON,
+        exportPDF,
         refreshJobs,
         // Modal states
         isAddModalOpen,

@@ -7,11 +7,11 @@ import { UpcomingWidget } from '../components/dashboard/UpcomingWidget';
 import { RecentActivityWidget } from '../components/dashboard/RecentActivityWidget';
 import { useAuth } from '../context/AuthContext';
 import { useJobs } from '../context/JobContext';
-import { PlusCircle, Sparkles, ArrowRight, LayoutGrid, Award } from 'lucide-react';
+import { PlusCircle, Sparkles, ArrowRight, LayoutGrid, Award, Printer } from 'lucide-react';
 
 export const DashboardPage = () => {
   const { currentUser } = useAuth();
-  const { setIsAddModalOpen, stats } = useJobs();
+  const { setIsAddModalOpen, stats, exportPDF } = useJobs();
   const navigate = useNavigate();
 
   return (
@@ -39,10 +39,18 @@ export const DashboardPage = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+            <button
+              onClick={exportPDF}
+              className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold backdrop-blur-md border border-white/20 transition-all"
+              title="Print or Save Career Audit Report as PDF"
+            >
+              <Printer className="w-4 h-4 text-emerald-300" />
+              <span>PDF Report</span>
+            </button>
             <button
               onClick={() => navigate('/applications')}
-              className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold backdrop-blur-md border border-white/20 transition-all"
+              className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold backdrop-blur-md border border-white/20 transition-all"
             >
               <LayoutGrid className="w-4 h-4" />
               <span>View Pipeline</span>

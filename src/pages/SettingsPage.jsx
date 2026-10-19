@@ -12,6 +12,7 @@ import {
   User,
   RefreshCw,
   CheckCircle,
+  Printer,
 } from 'lucide-react';
 import { useJobs } from '../context/JobContext';
 import { useAuth } from '../context/AuthContext';
@@ -25,6 +26,7 @@ export const SettingsPage = () => {
     importCSV,
     exportJSON,
     importJSON,
+    exportPDF,
     resetToSampleData,
     clearAll,
   } = useJobs();
@@ -167,6 +169,29 @@ export const SettingsPage = () => {
           >
             <Upload className="w-4 h-4" />
             <span>Import from CSV</span>
+          </button>
+        </div>
+      </div>
+
+      {/* PDF Career Progress Report */}
+      <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-6 shadow-xs space-y-4">
+        <div>
+          <h3 className="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+            <Printer className="w-4 h-4 text-emerald-500" />
+            <span>Executive PDF Career Report</span>
+          </h3>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+            Generates a professional, printable PDF document summarizing your KPI metrics, upcoming interviews, and full applications inventory
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-3">
+          <button
+            onClick={exportPDF}
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-xs transition-colors"
+          >
+            <Printer className="w-4 h-4" />
+            <span>Export Career Report (PDF)</span>
           </button>
         </div>
       </div>

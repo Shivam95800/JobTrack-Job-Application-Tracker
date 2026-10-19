@@ -98,8 +98,9 @@ Built with **React 19**, **Vite**, **Tailwind CSS v4**, **React Router v7**, **R
 - Quick note logger directly on the detail page to capture call takeaways and salary updates.
 
 ### 8. Import & Export Capabilities
+- **Executive PDF Career Report**: Generate and print or save a vector-sharp, professional PDF summary report containing candidate profile, KPI summary metrics, upcoming interview schedules, and complete application inventory.
 - **Export to CSV**: Download all application fields in spreadsheet-ready CSV format.
-- **Import from CSV**: Upload external CSV spreadsheets with automatic column mapping.
+- **Import from CSV**: Upload external CSV spreadsheets with automatic column mapping and numerical salary parsing.
 - **JSON Full Backup**: Lossless export including full timeline history, recruiter details, and notes.
 - **JSON Restore**: Instant one-click restore.
 - **Seed Realistic Data**: One-click button in Settings to reload 13 realistic tech applications (*Stripe, Figma, Notion, Vercel, Google, Netflix, Canva, Supabase, etc.*).
