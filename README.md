@@ -1,8 +1,27 @@
 # JobTrack – Job & Application Tracker
 
+<p align="center">
+  <a href="https://job-track-job-application-tracker.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-job--track--job--application--tracker.vercel.app-6366f1?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo on Vercel" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19.3-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React 19" />
+  <img src="https://img.shields.io/badge/Vite-8.3-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS v4" />
+  <img src="https://img.shields.io/badge/Deployment-Vercel_Ready-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+  <img src="https://img.shields.io/badge/License-MIT-emerald?style=flat-square" alt="License" />
+</p>
+
+> **Live Production Website**: [https://job-track-job-application-tracker.vercel.app](https://job-track-job-application-tracker.vercel.app)  
+> *Instant 1-click demo login included — explore 13 preloaded tech applications, live charts, Kanban board, and calendar sync!*
+
+---
+
 A modern, responsive, and feature-complete web application designed to help job seekers organize, track, and optimize every job application in one unified workspace.
 
-Built with **React**, **Vite**, **Tailwind CSS v4**, **React Router**, **Recharts**, and an extensible **localStorage service layer**.
+Built with **React 19**, **Vite**, **Tailwind CSS v4**, **React Router v7**, **Recharts**, and an extensible **localStorage service layer**.
 
 ---
 
