@@ -208,15 +208,6 @@ export const JobProvider = ({ children }) => {
     [currentUser?.id, addToast]
   );
 
-  const exportPDF = useCallback(() => {
-    if (jobs.length === 0) {
-      addToast('No applications to generate a report', 'error');
-      return;
-    }
-    pdfReportService.generatePDFReport(jobs, stats, currentUser);
-    addToast('Opening printable PDF report...', 'info');
-  }, [jobs, stats, currentUser, addToast]);
-
   // Confetti effect helper
   const triggerOfferConfetti = () => {
     try {
@@ -419,6 +410,15 @@ export const JobProvider = ({ children }) => {
   }, [jobs]);
 
   const resetFilters = () => setFilters(DEFAULT_FILTERS);
+
+  const exportPDF = useCallback(() => {
+    if (jobs.length === 0) {
+      addToast('No applications to generate a report', 'error');
+      return;
+    }
+    pdfReportService.generatePDFReport(jobs, stats, currentUser);
+    addToast('Opening printable PDF report...', 'info');
+  }, [jobs, stats, currentUser, addToast]);
 
   return (
     <JobContext.Provider
